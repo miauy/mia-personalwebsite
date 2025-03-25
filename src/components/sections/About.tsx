@@ -27,7 +27,7 @@ export function About() {
   return (
     <section id="about" className="py-24 relative bg-secondary/30">
       <Container>
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           <div className="flex flex-col items-center text-center mb-16">
             <div
               className={cn(
@@ -46,8 +46,8 @@ export function About() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-36">
-            <div className="space-y-4 max-w-full">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+            <div className="space-y-4 max-w-2xl">
               <h3 className="text-xl font-semibold text-primary">Who I Am</h3>
               <div className="text-muted-foreground text-justify">
                 <p>
