@@ -1,4 +1,3 @@
-
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -14,13 +13,14 @@ export function Contact() {
           <div className="flex flex-col">
             <div
               className={cn(
-                "inline-block mb-4 px-3 py-2 rounded-full text-center w-32",
+                "inline-block mb-4 px-2 py-2 rounded-full text-center w-32",
                 "bg-primary/5 text-primary text-sm font-medium",
                 "dark:bg-primary/10"
               )}
             >
               Contact
             </div>
+            
             <h2 className="text-3xl md:text-4xl font-display font-bold tracking-tight mb-6">
               Let's connect!
             </h2>
