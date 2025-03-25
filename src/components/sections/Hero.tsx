@@ -13,14 +13,18 @@ export function Hero() {
       <Container className="relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="order-2 md:order-1">
+            {/* Main heading - edit your name here */}
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold tracking-tight mb-8 opacity-0 animate-fade-in [animation-delay:400ms]">
               Hi I'm Mia!
             </h1>
             
-            <p className="text-gray-800 max-w-xl mb-10 text-xl md:text-2xl opacity-0 animate-fade-in [animation-delay:600ms]">
+            {/* Bio text - edit your personal statement here */}
+            {/* Font size reduced by 3 sizes from text-xl/2xl to text-xs/sm */}
+            <p className="text-gray-800 max-w-xl mb-10 text-xs md:text-sm opacity-0 animate-fade-in [animation-delay:600ms]">
               I am a junior at the University of Miami studying Computer Science and Immersive Media. I want to leverage my technical background to bridge the gap between users and technology to create experiences that matter.
             </p>
             
+            {/* Call-to-action buttons - edit links and text here */}
             <div className="flex flex-col sm:flex-row gap-4 mb-8 opacity-0 animate-fade-in [animation-delay:800ms]">
               <Button asChild size="lg" className="rounded-full px-8 gap-2 bg-gray-900 hover:bg-gray-800">
                 <a href="#contact">
@@ -35,6 +39,7 @@ export function Hero() {
             </div>
           </div>
           
+          {/* Profile image container - replace image src to change your photo */}
           <div className="order-1 md:order-2 flex justify-center md:justify-end opacity-0 animate-fade-in [animation-delay:600ms]">
             <div className="relative w-64 h-64 md:w-96 md:h-96 rounded-full overflow-hidden border-8 border-white shadow-xl">
               <img 

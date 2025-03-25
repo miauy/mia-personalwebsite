@@ -6,7 +6,18 @@ import { Button } from "@/components/ui/button";
 import { ExternalLink, GitBranch, Mic, Rocket, Trophy, Code as CodeIcon, Leaf } from "lucide-react";
 import { useState } from "react";
 
-// Project data
+// Project data - edit this array to update your projects
+// Each project has the following properties:
+// - id: Unique identifier for the project
+// - icon: Icon component to display
+// - title: Project name
+// - hackathon: Event where the project was created
+// - date: When the project was created
+// - description: Brief overview of the project
+// - techStack: Technologies used
+// - role: Your position in the project
+// - team: Team members
+// - links: URLs to demos, code, etc.
 const projects = [
   {
     id: "pitchperfect",
@@ -87,19 +98,22 @@ const projects = [
 ];
 
 export function Projects() {
+  // State to track which project is currently selected for display
   const [selectedProject, setSelectedProject] = useState(projects[0]);
 
   return (
     <section id="projects" className="py-24 bg-white">
       <Container>
+        {/* Section heading - edit text here */}
         <h2 className="text-5xl font-display font-bold tracking-tight mb-16 text-center text-gray-900">
           Projects
         </h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* Project List Column */}
+          {/* Left column: Project list/sidebar */}
           <div className="col-span-1 bg-gray-50 rounded-xl p-6 border border-gray-200 shadow-sm">
             <div className="space-y-8">
+              {/* Map through all projects to create the sidebar navigation */}
               {projects.map((project) => (
                 <div 
                   key={project.id}
@@ -111,9 +125,11 @@ export function Projects() {
                       "hover:bg-gray-100"
                   )}
                 >
+                  {/* Project icon */}
                   <div className="p-2 bg-gray-900 rounded-lg">
                     {project.icon}
                   </div>
+                  {/* Project title and metadata */}
                   <div>
                     <h3 className="font-medium text-gray-900 mb-1">{project.title}</h3>
                     <div className="flex gap-2 items-center">
@@ -128,8 +144,9 @@ export function Projects() {
             </div>
           </div>
 
-          {/* Project Details Column */}
+          {/* Right column: Detailed project view */}
           <div className="col-span-1 lg:col-span-2 bg-gray-50 rounded-xl p-8 border border-gray-200 shadow-sm">
+            {/* Project header with icon and title */}
             <div className="flex items-center gap-3 mb-2">
               <div className="p-2 bg-gray-900 rounded-lg">
                 {selectedProject.icon}
@@ -137,6 +154,7 @@ export function Projects() {
               <h3 className="text-2xl font-semibold">{selectedProject.title}</h3>
             </div>
             
+            {/* Project badges (hackathon and date) */}
             <div className="flex flex-wrap gap-2 mb-6">
               <Badge variant="outline" className="bg-gray-100 text-gray-700 border-gray-300">
                 {selectedProject.hackathon}
@@ -146,10 +164,12 @@ export function Projects() {
               </Badge>
             </div>
             
+            {/* Project description */}
             <p className="text-gray-700 mb-8">
               {selectedProject.description}
             </p>
             
+            {/* Tech stack section */}
             <div className="mb-6">
               <h4 className="text-gray-500 mb-2">Tech Stack:</h4>
               <div className="flex flex-wrap gap-2">
@@ -161,11 +181,13 @@ export function Projects() {
               </div>
             </div>
             
+            {/* Role section */}
             <div className="mb-6">
               <h4 className="text-gray-500 mb-2">Role:</h4>
               <p className="text-gray-700">{selectedProject.role}</p>
             </div>
             
+            {/* Team members section */}
             <div className="mb-8">
               <h4 className="text-gray-500 mb-2">Team:</h4>
               <p className="text-gray-700">
@@ -177,6 +199,7 @@ export function Projects() {
               </p>
             </div>
             
+            {/* Project links/buttons */}
             <div className="pt-6 border-t border-gray-200 flex gap-4">
               {selectedProject.links.map((link, index) => (
                 <Button
