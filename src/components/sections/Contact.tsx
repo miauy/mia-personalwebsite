@@ -22,7 +22,7 @@ export function Contact() {
             Let's connect!
           </h2>
 
-          <div className="flex flex-col md:flex-row items-center justify-center md:space-x-8 space-y-6 md:space-y-0 mt-8">
+          <div className="flex flex-col items-center justify-center gap-6 mt-8">
             <a 
               href="mailto:miauy@miami.edu" 
               className="flex items-center space-x-4 p-4 w-full max-w-xs rounded-lg transition-all hover:bg-secondary"

@@ -92,21 +92,23 @@ export function Resume() {
             </div>
           </div>
 
-          {/* GitHub link, moved from Contact section */}
-          <a 
-            href="https://github.com" 
-            target="_blank" 
-            rel="noreferrer" 
-            className="flex items-center space-x-4 p-4 w-full max-w-md rounded-lg transition-all hover:bg-secondary"
-          >
-            <div className="bg-primary/10 p-4 rounded-full">
-              <Github className="h-6 w-6 text-primary" />
-            </div>
-            <div className="text-left">
-              <h3 className="font-medium text-lg">GitHub</h3>
-              <p className="text-muted-foreground">github.com/miauy</p>
-            </div>
-          </a>
+          {/* GitHub link, centered below resume container */}
+          <div className="flex justify-center w-full max-w-md mx-auto">
+            <a 
+              href="https://github.com" 
+              target="_blank" 
+              rel="noreferrer" 
+              className="flex items-center space-x-4 p-4 rounded-lg transition-all hover:bg-secondary"
+            >
+              <div className="bg-primary/10 p-4 rounded-full">
+                <Github className="h-6 w-6 text-primary" />
+              </div>
+              <div className="text-left">
+                <h3 className="font-medium text-lg">GitHub</h3>
+                <p className="text-muted-foreground">github.com/miauy</p>
+              </div>
+            </a>
+          </div>
         </div>
       </Container>
     </section>
