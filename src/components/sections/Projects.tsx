@@ -1,4 +1,3 @@
-
 import { Container } from "@/components/ui/Container";
 import { cn } from "@/lib/utils";
 import { Badge } from "@/components/ui/badge";
@@ -36,8 +35,6 @@ const projects = [
     ],
     links: [
       { label: "Demo", icon: <ExternalLink className="h-4 w-4" />, url: "#" },
-      { label: "Code", icon: <GitBranch className="h-4 w-4" />, url: "#" },
-      // Removed the Submission button
     ]
   },
   {
@@ -52,8 +49,6 @@ const projects = [
     links: []  // Removed the demo and code buttons
   }
 ];
-
-
 
 export function Projects() {
   // State to track which project is currently selected for display
