@@ -1,24 +1,15 @@
-
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { Github, Linkedin, Mail } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-
 export function Contact() {
-  return (
-    <section id="contact" className="py-24">
+  return <section id="contact" className="py-24">
       <Container>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div className="flex flex-col">
-            <div
-              className={cn(
-                "inline-block mb-4 px-1 py-2 rounded-full text-center w-32",
-                "bg-primary/5 text-primary text-sm font-medium",
-                "dark:bg-primary/10"
-              )}
-            >
+            <div className="bg-zinc-100 mx-px my-[2px] py-0 rounded-none px-0">
               Contact
             </div>
             
@@ -82,6 +73,5 @@ export function Contact() {
           </div>
         </div>
       </Container>
-    </section>
-  );
+    </section>;
 }
