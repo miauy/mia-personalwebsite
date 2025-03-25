@@ -46,6 +46,7 @@ const projects = [
     title: "Miami XR 2025",
     date: "Feb 2025",
     description: "The University of Miami's largest XR conference featuring industry experts, tech visionaries, artists, and university scholars from around the globe in exploring the latest trends and innovations in XR technology. As the student lead organizer I worked directly with the head of the University of Miami Department of Interactive Media to plan and execute the event.",
+    techStack: [], // Adding an empty array for techStack
     role: "Student Lead Organizer",
     team: ["The University of Miami Department of Interactive Media", "Sidney Cocimano", "Raquel Henao", "Thomas Sydnor"],
     links: [
@@ -132,16 +133,19 @@ export function Projects() {
               {selectedProject.description}
             </p>
 
-            <div className="mb-6">
-              <h4 className="text-gray-500 mb-2">Tech Stack:</h4>
-              <div className="flex flex-wrap gap-2">
-                {selectedProject.techStack.map((tech, index) => (
-                  <Badge key={index} variant="secondary" className="bg-gray-200 text-gray-700">
-                    {tech}
-                  </Badge>
-                ))}
+            {/* Only render tech stack section if there are tech items */}
+            {selectedProject.techStack && selectedProject.techStack.length > 0 && (
+              <div className="mb-6">
+                <h4 className="text-gray-500 mb-2">Tech Stack:</h4>
+                <div className="flex flex-wrap gap-2">
+                  {selectedProject.techStack.map((tech, index) => (
+                    <Badge key={index} variant="secondary" className="bg-gray-200 text-gray-700">
+                      {tech}
+                    </Badge>
+                  ))}
+                </div>
               </div>
-            </div>
+            )}
 
             <div className="mb-6">
               <h4 className="text-gray-500 mb-2">Role:</h4>
