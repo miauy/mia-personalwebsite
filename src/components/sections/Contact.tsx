@@ -1,4 +1,3 @@
-
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -10,7 +9,8 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { Form, FormControl, FormField, FormItem, FormMessage } from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import emailjs from 'emailjs-com';
 
 // Define form validation schema
 const formSchema = z.object({
@@ -21,9 +21,21 @@ const formSchema = z.object({
 
 type ContactFormValues = z.infer<typeof formSchema>;
 
+// EmailJS configuration details
+const EMAILJS_SERVICE_ID = "service_id"; // You'll need to replace this with your actual EmailJS service ID
+const EMAILJS_TEMPLATE_ID = "template_id"; // You'll need to replace this with your actual EmailJS template ID
+const EMAILJS_USER_ID = "public_key"; // You'll need to replace this with your actual EmailJS user ID
+
 export function Contact() {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [emailJSInitialized, setEmailJSInitialized] = useState(false);
+
+  // Initialize EmailJS
+  useEffect(() => {
+    emailjs.init(EMAILJS_USER_ID);
+    setEmailJSInitialized(true);
+  }, []);
 
   // Initialize form
   const form = useForm<ContactFormValues>({
@@ -37,12 +49,32 @@ export function Contact() {
 
   // Handle form submission
   const onSubmit = async (data: ContactFormValues) => {
+    if (!emailJSInitialized) {
+      toast({
+        title: "Error",
+        description: "Email service not initialized yet. Please try again.",
+        variant: "destructive",
+      });
+      return;
+    }
+
     setIsSubmitting(true);
     
     try {
-      // In a real application, you would send this data to a backend service
-      // This is a simulated API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      // Prepare template parameters
+      const templateParams = {
+        from_name: data.name,
+        from_email: data.email,
+        to_email: "miauy@miami.edu",
+        message: data.message
+      };
+      
+      // Send email using EmailJS
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        templateParams
+      );
       
       // Show success message
       toast({
@@ -53,6 +85,8 @@ export function Contact() {
       // Reset form
       form.reset();
     } catch (error) {
+      console.error("Email sending failed:", error);
+      
       // Show error message
       toast({
         title: "Something went wrong",
