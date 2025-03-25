@@ -51,8 +51,8 @@ export function Hero() {
           </div>
         </div>
         
-        {/* Animated scroll down arrow */}
-        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex justify-center">
+        {/* Animated scroll down arrow - moved lower on the page */}
+        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex justify-center">
           <div className="opacity-0 animate-fade-in [animation-delay:1000ms]">
             <ChevronDown className="h-10 w-10 text-primary animate-float cursor-pointer" 
               onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })} />
