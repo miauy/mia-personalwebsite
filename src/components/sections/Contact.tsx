@@ -5,8 +5,65 @@ import { cn } from "@/lib/utils";
 import { Github, Linkedin, Mail } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import * as z from "zod";
+import { Form, FormControl, FormField, FormItem, FormMessage } from "@/components/ui/form";
+import { useToast } from "@/hooks/use-toast";
+import { useState } from "react";
+
+// Define form validation schema
+const formSchema = z.object({
+  name: z.string().min(2, { message: "Name must be at least 2 characters." }),
+  email: z.string().email({ message: "Please enter a valid email address." }),
+  message: z.string().min(10, { message: "Message must be at least 10 characters." }),
+});
+
+type ContactFormValues = z.infer<typeof formSchema>;
 
 export function Contact() {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  // Initialize form
+  const form = useForm<ContactFormValues>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      name: "",
+      email: "",
+      message: "",
+    },
+  });
+
+  // Handle form submission
+  const onSubmit = async (data: ContactFormValues) => {
+    setIsSubmitting(true);
+    
+    try {
+      // In a real application, you would send this data to a backend service
+      // This is a simulated API call
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      // Show success message
+      toast({
+        title: "Message sent!",
+        description: "Thank you for your message. I'll get back to you soon.",
+      });
+      
+      // Reset form
+      form.reset();
+    } catch (error) {
+      // Show error message
+      toast({
+        title: "Something went wrong",
+        description: "Your message couldn't be sent. Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <section id="contact" className="py-24">
       <Container>
@@ -67,18 +124,69 @@ export function Contact() {
 
           <div className="bg-card rounded-lg p-6 shadow-sm border border-primary/10 self-start">
             <h3 className="font-display font-semibold text-xl mb-6 text-primary">Send Me a Message</h3>
-            <form className="space-y-4">
-              <div>
-                <Input placeholder="Your Name" className="w-full focus-visible:ring-primary" />
-              </div>
-              <div>
-                <Input type="email" placeholder="Your Email" className="w-full focus-visible:ring-primary" />
-              </div>
-              <div>
-                <Textarea placeholder="Your Message" className="w-full min-h-[120px] focus-visible:ring-primary" />
-              </div>
-              <Button className="w-full bg-primary hover:bg-primary/80">Send Message</Button>
-            </form>
+            <Form {...form}>
+              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+                <FormField
+                  control={form.control}
+                  name="name"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormControl>
+                        <Input 
+                          placeholder="Your Name" 
+                          className="w-full focus-visible:ring-primary" 
+                          {...field} 
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                
+                <FormField
+                  control={form.control}
+                  name="email"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormControl>
+                        <Input 
+                          type="email" 
+                          placeholder="Your Email" 
+                          className="w-full focus-visible:ring-primary" 
+                          {...field} 
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                
+                <FormField
+                  control={form.control}
+                  name="message"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormControl>
+                        <Textarea 
+                          placeholder="Your Message" 
+                          className="w-full min-h-[120px] focus-visible:ring-primary" 
+                          {...field} 
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                
+                <Button 
+                  type="submit" 
+                  className="w-full bg-primary hover:bg-primary/80"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? "Sending..." : "Send Message"}
+                </Button>
+              </form>
+            </Form>
           </div>
         </div>
       </Container>
