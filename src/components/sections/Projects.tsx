@@ -1,8 +1,9 @@
+
 import { Container } from "@/components/ui/Container";
 import { cn } from "@/lib/utils";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, GitBranch, Mic, Rocket, Trophy, Code as CodeIcon, Leaf } from "lucide-react";
+import { ExternalLink, GitBranch, Mic, Trophy, Code as CodeIcon, Leaf, Headset } from "lucide-react";
 import { useState } from "react";
 
 // Project data - edit this array to update your projects
@@ -41,7 +42,7 @@ const projects = [
   },
   {
     id: "miamiXR",
-    icon: <Rocket className="h-5 w-5 text-gray-500" />,
+    icon: <Headset className="h-5 w-5 text-gray-500" />,
     title: "Miami XR 2025",
     date: "Feb 2025",
     description: "The University of Miami's largest XR conference featuring industry experts, tech visionaries, artists, and university scholars from around the globe in exploring the latest trends and innovations in XR technology. As the student lead organizer I worked directly with the head of the University of Miami Department of Interactive Media to plan and execute the event.",
