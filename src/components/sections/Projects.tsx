@@ -1,3 +1,4 @@
+
 import { Container } from "@/components/ui/Container";
 import { cn } from "@/lib/utils";
 import { Badge } from "@/components/ui/badge";
@@ -55,7 +56,7 @@ export function Projects() {
   const [selectedProject, setSelectedProject] = useState(projects[0]);
 
   return (
-    <section id="projects" className="py-24 bg-white">
+    <section id="projects" className="py-24 bg-secondary/30">
       <Container>
         {/* Section heading - with updated styling to match the Resume section */}
         <div className="flex flex-col items-center text-center mb-16">

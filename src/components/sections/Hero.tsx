@@ -1,7 +1,7 @@
 
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/button";
-import { Download, Mail } from "lucide-react";
+import { Download, Mail, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export function Hero() {
@@ -48,6 +48,14 @@ export function Hero() {
                 className="w-full h-full object-cover"
               />
             </div>
+          </div>
+        </div>
+        
+        {/* Animated scroll down arrow */}
+        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex justify-center">
+          <div className="opacity-0 animate-fade-in [animation-delay:1000ms]">
+            <ChevronDown className="h-10 w-10 text-primary animate-float cursor-pointer" 
+              onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })} />
           </div>
         </div>
       </Container>
