@@ -35,8 +35,8 @@ export function Contact() {
                 </div>
                 <div>
                   <h3 className="font-medium">Email</h3>
-                  <a href="mailto:hello@miauy.com" className="text-muted-foreground hover:text-primary transition-colors">
-                    hello@miauy.com
+                  <a href="mailto:miauy@miami.edu" className="text-muted-foreground hover:text-primary transition-colors">
+                    miauy@miami.edu
                   </a>
                 </div>
               </div>
@@ -47,8 +47,8 @@ export function Contact() {
                 </div>
                 <div>
                   <h3 className="font-medium">LinkedIn</h3>
-                  <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-                    linkedin.com/in/miauy
+                  <a href="https://www.linkedin.com/in/miaauy/" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                    linkedin.com/in/miaauy
                   </a>
                 </div>
               </div>

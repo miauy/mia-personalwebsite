@@ -15,6 +15,8 @@ import {
 import { Download, FileText, ExternalLink } from "lucide-react";
 
 export function Resume() {
+  const resumeUrl = "/lovable-uploads/2354da66-563f-4f42-91a8-27f3d6c10749.png";
+  
   return (
     <section id="resume" className="py-24 bg-secondary/30">
       <Container>
@@ -40,7 +42,7 @@ export function Resume() {
           <div className="max-w-md w-full mx-auto bg-card border border-border rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
             <div className="p-6 flex flex-col items-center text-center">
               <FileText className="h-16 w-16 text-primary mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Mia Uy - Product Manager Resume</h3>
+              <h3 className="text-xl font-semibold mb-2">Mia Uy - Resume</h3>
               <p className="text-muted-foreground mb-6">
                 Check out my professional experience, education, and skills.
               </p>
@@ -55,72 +57,24 @@ export function Resume() {
                   <DrawerContent className="max-h-[90vh]">
                     <div className="mx-auto w-full max-w-4xl">
                       <DrawerHeader>
-                        <DrawerTitle>Mia Uy - Product Manager</DrawerTitle>
-                        <DrawerDescription>Resume Preview</DrawerDescription>
+                        <DrawerTitle>Mia Uy</DrawerTitle>
+                        <DrawerDescription>Resume</DrawerDescription>
                       </DrawerHeader>
-                      <div className="p-4 overflow-auto max-h-[60vh]">
-                        <div className="aspect-[8.5/11] bg-white border rounded-md shadow-sm p-8 mx-auto">
-                          <h2 className="text-2xl font-bold mb-1">Mia Uy</h2>
-                          <p className="text-muted-foreground mb-4">Product Manager</p>
-                          
-                          <div className="mb-6">
-                            <h3 className="text-lg font-semibold border-b pb-1 mb-2">Contact</h3>
-                            <p>hello@miauy.com • LinkedIn • GitHub</p>
-                          </div>
-                          
-                          <div className="mb-6">
-                            <h3 className="text-lg font-semibold border-b pb-1 mb-2">Experience</h3>
-                            <div className="mb-4">
-                              <div className="flex justify-between">
-                                <span className="font-medium">TechCorp</span>
-                                <span className="text-sm">2022 - Present</span>
-                              </div>
-                              <p className="font-medium">Associate Product Manager</p>
-                              <ul className="list-disc list-inside text-sm space-y-1 mt-1">
-                                <li>Led user research initiatives and collaborated with engineering teams</li>
-                                <li>Conducted A/B testing to optimize user flows</li>
-                                <li>Delivered product features that increased user engagement by 25%</li>
-                              </ul>
-                            </div>
-                            
-                            <div className="mb-4">
-                              <div className="flex justify-between">
-                                <span className="font-medium">InnovateTech</span>
-                                <span className="text-sm">2021 - 2022</span>
-                              </div>
-                              <p className="font-medium">Product Management Intern</p>
-                              <ul className="list-disc list-inside text-sm space-y-1 mt-1">
-                                <li>Assisted in roadmap planning and feature prioritization</li>
-                                <li>Conducted competitive analysis and gathered user feedback</li>
-                              </ul>
-                            </div>
-                          </div>
-                          
-                          <div className="mb-6">
-                            <h3 className="text-lg font-semibold border-b pb-1 mb-2">Education</h3>
-                            <div className="flex justify-between">
-                              <span className="font-medium">Bachelor of Science in Information Technology</span>
-                              <span className="text-sm">2017 - 2021</span>
-                            </div>
-                            <p className="text-sm">University of Technology</p>
-                          </div>
-                          
-                          <div>
-                            <h3 className="text-lg font-semibold border-b pb-1 mb-2">Skills</h3>
-                            <div className="flex flex-wrap gap-2 mt-2">
-                              {["User Research", "Product Strategy", "Wireframing", "Prototyping", "User Stories", "Roadmapping", "Data Analysis", "A/B Testing", "Agile Methodologies", "UI/UX Design"].map((skill, i) => (
-                                <span key={i} className="px-2 py-0.5 bg-secondary text-xs rounded">
-                                  {skill}
-                                </span>
-                              ))}
-                            </div>
-                          </div>
+                      <div className="p-4 overflow-auto max-h-[70vh]">
+                        <div className="bg-white rounded-md shadow-sm mx-auto">
+                          <img 
+                            src={resumeUrl} 
+                            alt="Mia Uy's Resume" 
+                            className="w-full h-auto object-contain"
+                          />
                         </div>
                       </div>
                       <DrawerFooter>
-                        <Button className="gap-2">
-                          <Download className="h-4 w-4" /> Download PDF
-                        </Button>
+                        <a href={resumeUrl} download="Mia_Uy_Resume.png">
+                          <Button className="gap-2">
+                            <Download className="h-4 w-4" /> Download Resume
+                          </Button>
+                        </a>
                         <DrawerClose asChild>
                           <Button variant="outline">Close</Button>
                         </DrawerClose>
@@ -129,9 +83,11 @@ export function Resume() {
                   </DrawerContent>
                 </Drawer>
                 
-                <Button variant="default" className="gap-2">
-                  <Download className="h-4 w-4" /> Download PDF
-                </Button>
+                <a href={resumeUrl} download="Mia_Uy_Resume.png">
+                  <Button variant="default" className="gap-2">
+                    <Download className="h-4 w-4" /> Download Resume
+                  </Button>
+                </a>
               </div>
             </div>
           </div>
