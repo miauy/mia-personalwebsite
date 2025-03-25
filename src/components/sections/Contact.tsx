@@ -22,11 +22,8 @@ export function Contact() {
               Get in Touch
             </div>
             <h2 className="text-3xl md:text-4xl font-display font-bold tracking-tight mb-6">
-              Let's Work Together
+              Wanna connect?
             </h2>
-            <p className="text-muted-foreground mb-8 max-w-md">
-              I'm always open to discussing product design work or partnership opportunities.
-            </p>
             
             <div className="space-y-6">
               <div className="flex items-center">
