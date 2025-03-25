@@ -24,7 +24,7 @@ type ContactFormValues = z.infer<typeof formSchema>;
 
 // EmailJS configuration details
 // TODO: Replace these placeholder values with your actual EmailJS credentials from your EmailJS dashboard
-const EMAILJS_SERVICE_ID = "service_id"; // Replace with your actual EmailJS service ID (e.g., "service_abc123")
+const EMAILJS_SERVICE_ID = "service_x9hsunw"; // Your EmailJS service ID
 const EMAILJS_TEMPLATE_ID = "template_id"; // Replace with your actual EmailJS template ID (e.g., "template_xyz789")
 const EMAILJS_USER_ID = "public_key"; // Replace with your actual EmailJS public key (e.g., "user_aBcDeFgHiJkL")
 
