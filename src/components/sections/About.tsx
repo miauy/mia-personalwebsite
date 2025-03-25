@@ -46,7 +46,7 @@ export function About() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-10">
             <div className="space-y-4 max-w-full">
               <h3 className="text-xl font-semibold text-primary">Who I Am</h3>
               <div className="text-muted-foreground text-justify">
