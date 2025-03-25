@@ -7,14 +7,10 @@ import { Projects } from "@/components/sections/Projects";
 import { Resume } from "@/components/sections/Resume";
 import { Contact } from "@/components/sections/Contact";
 
-/**
- * Main page component that assembles all sections
- * 
- * HOW TO EDIT YOUR WEBSITE:
- * - To change the order of sections: reorder the components in the JSX below
- * - To remove a section: delete the component from the JSX below
- * - To add a section: import and add the component to the JSX below
- */
+// Main page component that assembles all sections
+// To edit the order of sections, reorder the components in the JSX below
+// To remove a section, delete the component from the JSX below
+// To add a section, import and add the component to the JSX below
 const Index = () => {
   return (
     <div className="flex flex-col min-h-screen bg-white">
