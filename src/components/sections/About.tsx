@@ -3,16 +3,20 @@ import { Container } from "@/components/ui/Container";
 import { cn } from "@/lib/utils";
 
 const skills = [
-  "User Research",
-  "Product Strategy",
-  "Wireframing",
-  "Prototyping",
-  "User Stories",
-  "Roadmapping",
-  "Data Analysis",
-  "A/B Testing",
-  "Agile Methodologies",
-  "UI/UX Design"
+  "Java",
+  "Python",
+  "C++",
+  "C",
+  "C#",
+  "HTML/CSS",
+  "JavaScript",
+  "Unity",
+  "Git and GitHub",
+  "Figma",
+  "Azure DevOps",
+  "Agile methodologies",
+  "User research",
+  "Product strategy"
 ];
 
 export function About() {
@@ -31,10 +35,10 @@ export function About() {
               About Me
             </div>
             <h2 className="text-3xl md:text-4xl font-display font-bold tracking-tight mb-6">
-              Delivering Exceptional Product Experiences
+              Crafting Digital Experiences
             </h2>
             <p className="text-muted-foreground mb-0 max-w-2xl">
-              My journey into product management combines analytical thinking with a passion for user-centered design.
+              
             </p>
           </div>
           
