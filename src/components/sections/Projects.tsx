@@ -10,7 +10,7 @@ import { useState } from "react";
 const projects = [
   {
     id: "pitchperfect",
-    icon: <Mic className="h-5 w-5 text-amber-500" />,
+    icon: <Mic className="h-5 w-5 text-gray-500" />,
     title: "PitchPerfect",
     hackathon: "YHacks",
     date: "Oct 2024",
@@ -26,7 +26,7 @@ const projects = [
   },
   {
     id: "pixelbattle",
-    icon: <Rocket className="h-5 w-5 text-blue-400" />,
+    icon: <Rocket className="h-5 w-5 text-gray-500" />,
     title: "Pixel Battle",
     hackathon: "Hack NYU",
     date: "Feb 2025",
@@ -41,7 +41,7 @@ const projects = [
   },
   {
     id: "intellistock",
-    icon: <CodeIcon className="h-5 w-5 text-gray-300" />,
+    icon: <CodeIcon className="h-5 w-5 text-gray-500" />,
     title: "Intellistock",
     hackathon: "HackRU",
     date: "Feb 2025",
@@ -56,7 +56,7 @@ const projects = [
   },
   {
     id: "ecohoya",
-    icon: <Trophy className="h-5 w-5 text-yellow-500" />,
+    icon: <Trophy className="h-5 w-5 text-gray-500" />,
     title: "EcoHoya Cup",
     hackathon: "Georgetown Hackathon",
     date: "Jan 2025",
@@ -71,7 +71,7 @@ const projects = [
   },
   {
     id: "verdellm",
-    icon: <Leaf className="h-5 w-5 text-green-500" />,
+    icon: <Leaf className="h-5 w-5 text-gray-500" />,
     title: "Verde LLM",
     hackathon: "UTD Ripple Hacks",
     date: "Nov 2024",
@@ -92,13 +92,13 @@ export function Projects() {
   return (
     <section id="projects" className="py-24 bg-white">
       <Container>
-        <h2 className="text-5xl font-display font-bold tracking-tight mb-16 text-center text-amber-500">
+        <h2 className="text-5xl font-display font-bold tracking-tight mb-16 text-center text-gray-900">
           Projects
         </h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Project List Column */}
-          <div className="col-span-1 bg-gray-50 rounded-xl p-6 border border-gray-100 shadow-sm">
+          <div className="col-span-1 bg-gray-50 rounded-xl p-6 border border-gray-200 shadow-sm">
             <div className="space-y-8">
               {projects.map((project) => (
                 <div 
@@ -107,11 +107,11 @@ export function Projects() {
                   className={cn(
                     "flex items-start gap-4 p-4 rounded-lg cursor-pointer transition-all",
                     project.id === selectedProject.id ? 
-                      "bg-amber-500/10 border-l-4 border-amber-500" : 
+                      "bg-gray-200 border-l-4 border-gray-900" : 
                       "hover:bg-gray-100"
                   )}
                 >
-                  <div className="p-2 bg-gray-800 rounded-lg">
+                  <div className="p-2 bg-gray-900 rounded-lg">
                     {project.icon}
                   </div>
                   <div>
@@ -129,16 +129,16 @@ export function Projects() {
           </div>
 
           {/* Project Details Column */}
-          <div className="col-span-1 lg:col-span-2 bg-gray-50 rounded-xl p-8 border border-gray-100 shadow-sm">
+          <div className="col-span-1 lg:col-span-2 bg-gray-50 rounded-xl p-8 border border-gray-200 shadow-sm">
             <div className="flex items-center gap-3 mb-2">
-              <div className="p-2 bg-gray-800 rounded-lg">
+              <div className="p-2 bg-gray-900 rounded-lg">
                 {selectedProject.icon}
               </div>
               <h3 className="text-2xl font-semibold">{selectedProject.title}</h3>
             </div>
             
             <div className="flex flex-wrap gap-2 mb-6">
-              <Badge variant="outline" className="bg-amber-500/10 text-amber-700 border-amber-200">
+              <Badge variant="outline" className="bg-gray-100 text-gray-700 border-gray-300">
                 {selectedProject.hackathon}
               </Badge>
               <Badge variant="outline" className="bg-gray-100 text-gray-700 border-gray-200">
@@ -170,7 +170,7 @@ export function Projects() {
               <h4 className="text-gray-500 mb-2">Team:</h4>
               <p className="text-gray-700">
                 {selectedProject.team.map((member, index) => (
-                  <span key={index} className="text-amber-500 font-medium">
+                  <span key={index} className="text-gray-900 font-medium">
                     {member}{index < selectedProject.team.length - 1 ? ' · ' : ''}
                   </span>
                 ))}
@@ -182,7 +182,7 @@ export function Projects() {
                 <Button
                   key={index}
                   variant="outline"
-                  className="bg-gray-800 text-white hover:bg-gray-700 border-none"
+                  className="bg-gray-900 text-white hover:bg-gray-800 border-none"
                   asChild
                 >
                   <a href={link.url} target="_blank" rel="noopener noreferrer">
