@@ -45,7 +45,7 @@ export function About() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
             <div className="space-y-4 max-w-full">
               <h3 className="text-xl font-semibold">Who I Am</h3>
-              <div className="text-muted-foreground">
+              <div className="text-muted-foreground text-left">
                 <p>
                   I am a junior at the University of Miami studying Computer Science and Immersive Media. I am seeking a career in Product Management in the technology industry, specifically within extended reality (XR). I discovered my passion for XR during my time as a project manager at my university's Virtual Experience Simulation Lab (VESL), where I have managed XR projects from proposal to deployment. In addition to managing projects, I have also explored UI/UX design and created the user interface for a VR community garden simulation that teaches kids in underprivileged communities how and where food is grown.
                 </p>
