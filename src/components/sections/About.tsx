@@ -42,10 +42,13 @@ export function About() {
             <div className="space-y-4">
               <h3 className="text-xl font-semibold">Who I Am</h3>
               <p className="text-muted-foreground">
-                I'm an aspiring product manager with a keen eye for design and a strategic mindset. My approach centers on creating intuitive products that solve real problems while delivering exceptional user experiences.
+                I am a junior at the University of Miami studying Computer Science and Immersive Media. I am seeking a career in Product Management in the technology industry, specifically within extended reality (XR). I discovered my passion for XR during my time as a project manager at my university's Virtual Experience Simulation Lab (VESL), where I have managed XR projects from proposal to deployment. In addition to managing projects, I have also explored UI/UX design and created the user interface for a VR community garden simulation that teaches kids in underprivileged communities how and where food is grown.
               </p>
               <p className="text-muted-foreground">
-                With a background in technology and design, I bridge the gap between technical possibilities and user needs, driving product development that meets business goals while delighting users.
+                Throughout college, I have developed one of my strongest skills: leadership. During my sophomore year, I co-founded and served as President of Kappa Theta Pi, my university's first and only Professional Technology Fraternity, for two years.
+              </p>
+              <p className="text-muted-foreground">
+                Outside of academia, you will find me on the pickleball courts, in the kitchen experimenting with new recipes, or in a studio crocheting and sewing.
               </p>
             </div>
             
