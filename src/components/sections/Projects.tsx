@@ -90,8 +90,8 @@ export function Projects() {
                   className={cn(
                     "flex items-start gap-4 p-4 rounded-lg cursor-pointer transition-all",
                     project.id === selectedProject.id ?
-                      "bg-gray-200 border-l-4 border-gray-900" :
-                      "hover:bg-gray-100"
+                      "bg-purple-200 border-l-4 border-purple-700" : // Changed to purple for selected
+                      "hover:bg-purple-50" // Changed to light purple for hover
                   )}
                 >
                   {/* Project icon */}
