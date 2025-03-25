@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 export function Hero() {
   return (
     <section
-      className="min-h-screen py-32 flex items-center relative overflow-hidden"
+      className="h-screen flex items-center justify-center relative overflow-hidden"
       id="hero"
     >
       {/* Aurora Background Effect */}
