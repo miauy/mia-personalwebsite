@@ -14,7 +14,7 @@ export function Contact() {
           <div className="flex flex-col">
             <div
               className={cn(
-                "inline-block mb-4 px-4 py-1.5 rounded-full",
+                "inline-block mb-4 px-6 py-2.5 rounded-full",
                 "bg-primary/5 text-primary text-sm font-medium",
                 "dark:bg-primary/10"
               )}
