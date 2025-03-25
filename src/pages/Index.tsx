@@ -13,7 +13,7 @@ import { Contact } from "@/components/sections/Contact";
 // To add a section, import and add the component to the JSX below
 const Index = () => {
   return (
-    <div className="flex flex-col min-h-screen bg-white">
+    <div className="flex flex-col min-h-screen bg-secondary/30">
       {/* Header: Contains navigation and site identity */}
       <Header />
       
