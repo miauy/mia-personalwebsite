@@ -43,17 +43,19 @@ export function About() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-            <div className="space-y-4">
+            <div className="space-y-4 max-w-full">
               <h3 className="text-xl font-semibold">Who I Am</h3>
-              <p className="text-muted-foreground">
-                I am a junior at the University of Miami studying Computer Science and Immersive Media. I am seeking a career in Product Management in the technology industry, specifically within extended reality (XR). I discovered my passion for XR during my time as a project manager at my university's Virtual Experience Simulation Lab (VESL), where I have managed XR projects from proposal to deployment. In addition to managing projects, I have also explored UI/UX design and created the user interface for a VR community garden simulation that teaches kids in underprivileged communities how and where food is grown.
-              </p>
-              <p className="text-muted-foreground">
-                Throughout college, I have developed one of my strongest skills: leadership. During my sophomore year, I co-founded and served as President of Kappa Theta Pi, my university's first and only Professional Technology Fraternity, for two years.
-              </p>
-              <p className="text-muted-foreground">
-                Outside of academia, you will find me on the pickleball courts, in the kitchen experimenting with new recipes, or in a studio crocheting and sewing.
-              </p>
+              <div className="text-muted-foreground">
+                <p>
+                  I am a junior at the University of Miami studying Computer Science and Immersive Media. I am seeking a career in Product Management in the technology industry, specifically within extended reality (XR). I discovered my passion for XR during my time as a project manager at my university's Virtual Experience Simulation Lab (VESL), where I have managed XR projects from proposal to deployment. In addition to managing projects, I have also explored UI/UX design and created the user interface for a VR community garden simulation that teaches kids in underprivileged communities how and where food is grown.
+                </p>
+                <p className="mt-4">
+                  Throughout college, I have developed one of my strongest skills: leadership. During my sophomore year, I co-founded and served as President of Kappa Theta Pi, my university's first and only Professional Technology Fraternity, for two years.
+                </p>
+                <p className="mt-4">
+                  Outside of academia, you will find me on the pickleball courts, in the kitchen experimenting with new recipes, or in a studio crocheting and sewing.
+                </p>
+              </div>
             </div>
             
             <div className="space-y-4">
