@@ -22,7 +22,7 @@ export function Contact() {
             </div>
             
             <h2 className="text-3xl md:text-4xl font-display font-bold tracking-tight mb-6">
-              Let's <span className="text-primary">connect!</span>
+              Let's connect!
             </h2>
 
             <div className="space-y-6">
