@@ -104,10 +104,21 @@ export function Projects() {
   return (
     <section id="projects" className="py-24 bg-white">
       <Container>
-        {/* Section heading - edit text here */}
-        <h2 className="text-5xl font-display font-bold tracking-tight mb-16 text-center text-gray-900">
-          Projects
-        </h2>
+        {/* Section heading - with updated styling to match the Resume section */}
+        <div className="flex flex-col items-center text-center mb-16">
+          <div
+            className={cn(
+              "inline-block mb-4 px-4 py-1.5 rounded-full",
+              "bg-primary/5 text-primary text-sm font-medium",
+              "dark:bg-primary/10"
+            )}
+          >
+            Projects
+          </div>
+          <h2 className="text-3xl md:text-4xl font-display font-bold tracking-tight mb-6">
+            Projects
+          </h2>
+        </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Left column: Project list/sidebar */}
@@ -154,7 +165,6 @@ export function Projects() {
               <h3 className="text-2xl font-semibold">{selectedProject.title}</h3>
             </div>
             
-            {/* Project badges (hackathon and date) */}
             <div className="flex flex-wrap gap-2 mb-6">
               <Badge variant="outline" className="bg-gray-100 text-gray-700 border-gray-300">
                 {selectedProject.hackathon}
@@ -164,12 +174,10 @@ export function Projects() {
               </Badge>
             </div>
             
-            {/* Project description */}
             <p className="text-gray-700 mb-8">
               {selectedProject.description}
             </p>
             
-            {/* Tech stack section */}
             <div className="mb-6">
               <h4 className="text-gray-500 mb-2">Tech Stack:</h4>
               <div className="flex flex-wrap gap-2">
@@ -181,13 +189,11 @@ export function Projects() {
               </div>
             </div>
             
-            {/* Role section */}
             <div className="mb-6">
               <h4 className="text-gray-500 mb-2">Role:</h4>
               <p className="text-gray-700">{selectedProject.role}</p>
             </div>
             
-            {/* Team members section */}
             <div className="mb-8">
               <h4 className="text-gray-500 mb-2">Team:</h4>
               <p className="text-gray-700">
@@ -199,7 +205,6 @@ export function Projects() {
               </p>
             </div>
             
-            {/* Project links/buttons */}
             <div className="pt-6 border-t border-gray-200 flex gap-4">
               {selectedProject.links.map((link, index) => (
                 <Button
