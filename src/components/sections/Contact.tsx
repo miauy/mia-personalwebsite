@@ -8,15 +8,21 @@ export function Contact() {
   return <section id="contact" className="py-24">
       <Container>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          <div className="flex flex-col">
-            <div className="bg-zinc-100 mx-px my-[2px] py-0 rounded-none px-0">
+          <div className="flex-col">
+            <div
+              className={cn(
+                "w-[87] inline-block mb-4 px-3 py-2 rounded-full text-center",
+                "bg-primary/5 text-primary text-sm font-medium",
+                "dark:bg-primary/10"
+              )}
+            >
               Contact
             </div>
             
             <h2 className="text-3xl md:text-4xl font-display font-bold tracking-tight mb-6">
               Let's connect!
             </h2>
-            
+
             <div className="space-y-6">
               <div className="flex items-center">
                 <div className="bg-primary/10 p-2 rounded-full mr-4">
@@ -29,7 +35,7 @@ export function Contact() {
                   </a>
                 </div>
               </div>
-              
+
               <div className="flex items-center">
                 <div className="bg-primary/10 p-2 rounded-full mr-4">
                   <Linkedin className="h-5 w-5 text-primary" />
@@ -41,7 +47,7 @@ export function Contact() {
                   </a>
                 </div>
               </div>
-              
+
               <div className="flex items-center">
                 <div className="bg-primary/10 p-2 rounded-full mr-4">
                   <Github className="h-5 w-5 text-primary" />
@@ -55,7 +61,7 @@ export function Contact() {
               </div>
             </div>
           </div>
-          
+
           <div className="bg-card rounded-lg p-6 shadow-sm border self-start">
             <h3 className="font-display font-semibold text-xl mb-6">Send Me a Message</h3>
             <form className="space-y-4">
