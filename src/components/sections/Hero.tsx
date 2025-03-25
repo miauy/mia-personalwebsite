@@ -15,7 +15,7 @@ export function Hero() {
           <div className="order-2 md:order-1">
             {/* Main heading - edit your name here */}
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold tracking-tight mb-8 opacity-0 animate-fade-in [animation-delay:400ms]">
-              Hi I'm Mia!
+              Hi I'm <span className="text-primary">Mia!</span>
             </h1>
             
             {/* Bio text - edit your personal statement here */}
@@ -26,12 +26,12 @@ export function Hero() {
             
             {/* Call-to-action buttons - edit links and text here */}
             <div className="flex flex-col sm:flex-row gap-4 mb-8 opacity-0 animate-fade-in [animation-delay:800ms]">
-              <Button asChild size="lg" className="rounded-full px-8 gap-2 bg-gray-900 hover:bg-gray-800">
+              <Button asChild size="lg" className="rounded-full px-8 gap-2 bg-primary hover:bg-primary/80">
                 <a href="#contact">
                   <Mail className="h-4 w-4" /> Get in Touch
                 </a>
               </Button>
-              <Button asChild variant="outline" size="lg" className="rounded-full px-8 gap-2 border-gray-300 text-gray-800 hover:bg-gray-50">
+              <Button asChild variant="outline" size="lg" className="rounded-full px-8 gap-2 border-primary/30 text-primary hover:bg-secondary/50">
                 <a href="#resume">
                   <Download className="h-4 w-4" /> View Resume
                 </a>
@@ -41,7 +41,7 @@ export function Hero() {
           
           {/* Profile image container - replace image src to change your photo */}
           <div className="order-1 md:order-2 flex justify-center md:justify-end opacity-0 animate-fade-in [animation-delay:600ms]">
-            <div className="relative w-64 h-64 md:w-96 md:h-96 rounded-full overflow-hidden border-8 border-white shadow-xl">
+            <div className="relative w-64 h-64 md:w-96 md:h-96 rounded-full overflow-hidden border-8 border-white shadow-xl ring-2 ring-primary/20">
               <img 
                 src="/lovable-uploads/903c31a3-df23-4391-b24c-9fb7cf8d3a5d.png" 
                 alt="Mia Uy" 

@@ -32,14 +32,13 @@ export function About() {
             <div
               className={cn(
                 "inline-block mb-4 px-4 py-1.5 rounded-full",
-                "bg-primary/5 text-primary text-sm font-medium",
-                "dark:bg-primary/10"
+                "bg-secondary text-secondary-foreground text-sm font-medium"
               )}
             >
               About Me
             </div>
-            <h2 className="text-3xl md:text-4xl font-display font-bold tracking-tight mb-6">
-              Crafting Digital Experiences
+            <h2 className="text-3xl md:text-4xl font-display font-bold tracking-tight mb-6 text-primary-foreground">
+              <span className="text-primary">Crafting Digital Experiences</span>
             </h2>
             <p className="text-muted-foreground mb-0 max-w-2xl">
               
@@ -48,7 +47,7 @@ export function About() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
             <div className="space-y-4 max-w-full">
-              <h3 className="text-xl font-semibold">Who I Am</h3>
+              <h3 className="text-xl font-semibold text-primary">Who I Am</h3>
               <div className="text-muted-foreground text-justify">
                 <p>
                   I am a junior at the University of Miami studying Computer Science and Immersive Media. I am seeking a career in Product Management in the technology industry, specifically within extended reality (XR). I discovered my passion for XR during my time as a project manager at my university's Virtual Experience Simulation Lab (VESL), where I have managed XR projects from proposal to deployment. In addition to managing projects, I have also explored UI/UX design and created the user interface for a VR community garden simulation that teaches kids in underprivileged communities how and where food is grown.
@@ -63,7 +62,7 @@ export function About() {
             </div>
             
             <div className="space-y-4">
-              <h3 className="text-xl font-semibold">My Skills</h3>
+              <h3 className="text-xl font-semibold text-primary">My Skills</h3>
               <div className="flex flex-wrap gap-2">
                 {skills.map((skill) => (
                   <span
