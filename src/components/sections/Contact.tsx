@@ -22,7 +22,7 @@ export function Contact() {
               Get in Touch
             </div>
             <h2 className="text-3xl md:text-4xl font-display font-bold tracking-tight mb-6">
-              Wanna connect?
+              Let's connect!
             </h2>
             
             <div className="space-y-6">
