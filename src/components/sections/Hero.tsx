@@ -18,7 +18,7 @@ export function Hero() {
             </h1>
             
             <p className="text-gray-800 max-w-xl mb-10 text-xl md:text-2xl opacity-0 animate-fade-in [animation-delay:600ms]">
-              I craft digital experiences and help bridge the gap between users and technology to create experiences that matter.
+              I am a junior at the University of Miami studying Computer Science and Immersive Media. I want to leverage my technical background to bridge the gap between users and technology to create experiences that matter.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 mb-8 opacity-0 animate-fade-in [animation-delay:800ms]">
@@ -38,7 +38,7 @@ export function Hero() {
           <div className="order-1 md:order-2 flex justify-center md:justify-end opacity-0 animate-fade-in [animation-delay:600ms]">
             <div className="relative w-64 h-64 md:w-96 md:h-96 rounded-full overflow-hidden border-8 border-white shadow-xl">
               <img 
-                src="/lovable-uploads/a0c01495-b6bc-4c8d-b1b0-86346af2d6bb.png" 
+                src="/lovable-uploads/903c31a3-df23-4391-b24c-9fb7cf8d3a5d.png" 
                 alt="Mia Uy" 
                 className="w-full h-full object-cover"
               />
