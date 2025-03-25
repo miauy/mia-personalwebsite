@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 export function Hero() {
   return (
     <section
-      className="min-h-screen py-32 flex items-center relative overflow-hidden bg-white"
+      className="min-h-screen py-32 flex items-center relative overflow-hidden bg-secondary/30"
       id="hero"
     >
       <Container className="relative z-10">

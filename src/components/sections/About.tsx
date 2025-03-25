@@ -25,7 +25,7 @@ const skills = [
 
 export function About() {
   return (
-    <section id="about" className="py-24 relative">
+    <section id="about" className="py-24 relative bg-secondary/30">
       <Container>
         <div className="max-w-3xl mx-auto">
           <div className="flex flex-col items-center text-center mb-16">
