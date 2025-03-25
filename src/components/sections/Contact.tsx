@@ -1,3 +1,4 @@
+
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -22,9 +23,10 @@ const formSchema = z.object({
 type ContactFormValues = z.infer<typeof formSchema>;
 
 // EmailJS configuration details
-const EMAILJS_SERVICE_ID = "service_id"; // You'll need to replace this with your actual EmailJS service ID
-const EMAILJS_TEMPLATE_ID = "template_id"; // You'll need to replace this with your actual EmailJS template ID
-const EMAILJS_USER_ID = "public_key"; // You'll need to replace this with your actual EmailJS user ID
+// TODO: Replace these placeholder values with your actual EmailJS credentials from your EmailJS dashboard
+const EMAILJS_SERVICE_ID = "service_id"; // Replace with your actual EmailJS service ID (e.g., "service_abc123")
+const EMAILJS_TEMPLATE_ID = "template_id"; // Replace with your actual EmailJS template ID (e.g., "template_xyz789")
+const EMAILJS_USER_ID = "public_key"; // Replace with your actual EmailJS public key (e.g., "user_aBcDeFgHiJkL")
 
 export function Contact() {
   const { toast } = useToast();
