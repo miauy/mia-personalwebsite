@@ -10,8 +10,8 @@ export function Contact() {
   return (
     <section id="contact" className="py-24">
       <Container>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div className="flex flex-col">
             <div
               className={cn(
                 "inline-block mb-4 px-4 py-1.5 rounded-full",
@@ -64,7 +64,7 @@ export function Contact() {
             </div>
           </div>
           
-          <div className="bg-card rounded-lg p-6 shadow-sm border">
+          <div className="bg-card rounded-lg p-6 shadow-sm border self-start">
             <h3 className="font-display font-semibold text-xl mb-6">Send Me a Message</h3>
             <form className="space-y-4">
               <div>
