@@ -37,7 +37,7 @@ const projects = [
     links: [
       { label: "Demo", icon: <ExternalLink className="h-4 w-4" />, url: "#" },
       { label: "Code", icon: <GitBranch className="h-4 w-4" />, url: "#" },
-      { label: "Submission", icon: <ExternalLink className="h-4 w-4" />, url: "#" },
+      // Removed the Submission button
     ]
   },
   {
