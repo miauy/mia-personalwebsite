@@ -32,7 +32,8 @@ export function About() {
             <div
               className={cn(
                 "inline-block mb-4 px-4 py-1.5 rounded-full",
-                "bg-secondary text-secondary-foreground text-sm font-medium"
+                "bg-primary/5 text-primary text-sm font-medium",
+                "dark:bg-primary/10"
               )}
             >
               About Me

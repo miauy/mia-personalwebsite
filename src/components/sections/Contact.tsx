@@ -15,7 +15,8 @@ export function Contact() {
             <div
               className={cn(
                 "w-[87] inline-block mb-4 px-3 py-2 rounded-full text-center",
-                "bg-secondary text-secondary-foreground text-sm font-medium"
+                "bg-primary/5 text-primary text-sm font-medium",
+                "dark:bg-primary/10"
               )}
             >
               Contact
