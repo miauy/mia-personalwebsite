@@ -1,4 +1,3 @@
-
 import { Container } from "@/components/ui/Container";
 import { cn } from "@/lib/utils";
 import { Badge } from "@/components/ui/badge";
@@ -49,10 +48,7 @@ const projects = [
     techStack: [], // Adding an empty array for techStack
     role: "Student Lead Organizer",
     team: ["The University of Miami Department of Interactive Media", "Sidney Cocimano", "Raquel Henao", "Thomas Sydnor"],
-    links: [
-      { label: "Demo", icon: <ExternalLink className="h-4 w-4" />, url: "#" },
-      { label: "Code", icon: <GitBranch className="h-4 w-4" />, url: "#" },
-    ]
+    links: []  // Removed the demo and code buttons
   }
 ];
 
