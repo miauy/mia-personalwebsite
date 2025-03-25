@@ -28,7 +28,7 @@ export function Hero() {
             <div className="flex flex-col sm:flex-row gap-4 mb-8 opacity-0 animate-fade-in [animation-delay:800ms]">
               <Button asChild size="lg" className="rounded-full px-8 gap-2 bg-primary hover:bg-primary/80">
                 <a href="#contact">
-                  <Mail className="h-4 w-4" /> Get in Touch
+                  <Mail className="h-4 w-4" /> Connect!
                 </a>
               </Button>
               <Button asChild variant="outline" size="lg" className="rounded-full px-8 gap-2 border-primary/30 text-primary hover:bg-secondary/50">
