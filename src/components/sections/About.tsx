@@ -37,7 +37,7 @@ export function About() {
             >
               About Me
             </div>
-            <h2 className="text-3xl md:text-4xl font-display font-bold tracking-tight mb-6 text-primary-foreground">
+            <h2 className="text-3xl md:text-4xl font-display font-bold tracking-tight mb-6 text-foreground">
               Crafting Digital Experiences
             </h2>
             <p className="text-muted-foreground mb-0 max-w-2xl">
