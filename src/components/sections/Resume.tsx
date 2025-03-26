@@ -47,10 +47,11 @@ export function Resume() {
                 Check out my professional experience, education, and skills.
               </p>
               
-              <div className="flex gap-4">
+              {/* Modified flex layout and button sizes for better mobile display */}
+              <div className="flex flex-col sm:flex-row gap-3 w-full">
                 <Drawer>
                   <DrawerTrigger asChild>
-                    <Button variant="outline" className="gap-2">
+                    <Button variant="outline" className="gap-2 text-sm" size="sm">
                       <FileText className="h-4 w-4" /> View Resume
                     </Button>
                   </DrawerTrigger>
@@ -83,8 +84,8 @@ export function Resume() {
                   </DrawerContent>
                 </Drawer>
                 
-                <a href={resumeUrl} download="Mia_Uy_Resume.png">
-                  <Button variant="default" className="gap-2">
+                <a href={resumeUrl} download="Mia_Uy_Resume.png" className="w-full sm:w-auto">
+                  <Button variant="default" className="gap-2 text-sm w-full" size="sm">
                     <Download className="h-4 w-4" /> Download Resume
                   </Button>
                 </a>
