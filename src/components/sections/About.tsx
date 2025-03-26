@@ -1,24 +1,19 @@
-
 import { Container } from "@/components/ui/Container";
 import { cn } from "@/lib/utils";
 
 // Categorized skills
 const skillCategories = [
   {
-    title: "Programming Languages",
-    skills: ["JavaScript", "TypeScript", "Python", "Java", "C++", "C", "C#", "HTML/CSS"],
+    title: "Technical Skills",
+    skills: ["JavaScript", "TypeScript", "Python", "Java", "C++", "C", "C#", "HTML/CSS", "React", "Node.js", "Express", "Unity", "Three.js", "Git and GitHub"],
   },
   {
-    title: "Frameworks & Libraries",
-    skills: ["React", "Node.js", "Express", "Unity", "Three.js"],
-  },
-  {
-    title: "Design & Creative Tools",
+    title: "Design & UX",
     skills: ["Figma", "UI/UX Design", "Wireframing"],
   },
   {
-    title: "Other Skills",
-    skills: ["Git and GitHub", "Azure DevOps", "Agile methodologies", "User research", "Product strategy", "Project management"],
+    title: "Product & Project Management",
+    skills: ["Product Strategy", "Project Management", "Agile Methodologies", "User Research", "Azure DevOps"],
   }
 ];
 
