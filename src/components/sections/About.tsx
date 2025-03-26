@@ -2,25 +2,24 @@
 import { Container } from "@/components/ui/Container";
 import { cn } from "@/lib/utils";
 
-const skills = [
-  "Java",
-  "Python",
-  "C++",
-  "C",
-  "C#",
-  "HTML/CSS",
-  "JavaScript",
-  "React",
-  "Node.js",
-  "Express",
-  "Unity",
-  "Git and GitHub",
-  "Figma",
-  "Azure DevOps",
-  "Agile methodologies",
-  "User research",
-  "Product strategy",
-  "Project management",
+// Categorized skills
+const skillCategories = [
+  {
+    title: "Programming Languages",
+    skills: ["JavaScript", "TypeScript", "Python", "Java", "C++", "C", "C#", "HTML/CSS"],
+  },
+  {
+    title: "Frameworks & Libraries",
+    skills: ["React", "Node.js", "Express", "Unity", "Three.js"],
+  },
+  {
+    title: "Design & Creative Tools",
+    skills: ["Figma", "UI/UX Design", "Wireframing"],
+  },
+  {
+    title: "Other Skills",
+    skills: ["Git and GitHub", "Azure DevOps", "Agile methodologies", "User research", "Product strategy", "Project management"],
+  }
 ];
 
 export function About() {
@@ -62,16 +61,27 @@ export function About() {
               </div>
             </div>
             
-            <div className="space-y-4">
+            <div className="space-y-6">
               <h3 className="text-xl font-semibold text-primary">My Skills</h3>
-              <div className="flex flex-wrap gap-2">
-                {skills.map((skill) => (
-                  <span
-                    key={skill}
-                    className="px-3 py-1 bg-secondary text-secondary-foreground rounded-full text-sm"
+              
+              <div className="flex flex-col gap-6">
+                {skillCategories.map((category) => (
+                  <div 
+                    key={category.title}
+                    className="bg-background/50 border border-border rounded-lg p-5 shadow-sm"
                   >
-                    {skill}
-                  </span>
+                    <h4 className="text-lg font-medium text-primary mb-3">{category.title}</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {category.skills.map((skill) => (
+                        <span
+                          key={skill}
+                          className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm"
+                        >
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
                 ))}
               </div>
             </div>
