@@ -1,4 +1,3 @@
-
 import { Container } from "@/components/ui/Container";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -47,7 +46,6 @@ export function Resume() {
                 Check out my professional experience, education, and skills.
               </p>
               
-              {/* Modified flex layout to center buttons, using justify-center */}
               <div className="flex flex-col sm:flex-row gap-3 w-full justify-center">
                 <Drawer>
                   <DrawerTrigger asChild>
@@ -93,7 +91,6 @@ export function Resume() {
             </div>
           </div>
 
-          {/* GitHub link, centered below resume container */}
           <div className="flex justify-center w-full max-w-md mx-auto">
             <a 
               href="https://github.com" 
