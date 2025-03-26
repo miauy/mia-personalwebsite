@@ -47,8 +47,8 @@ export function Resume() {
                 Check out my professional experience, education, and skills.
               </p>
               
-              {/* Modified flex layout and button sizes for better mobile display */}
-              <div className="flex flex-col sm:flex-row gap-3 w-full">
+              {/* Modified flex layout to center buttons, using justify-center */}
+              <div className="flex flex-col sm:flex-row gap-3 w-full justify-center">
                 <Drawer>
                   <DrawerTrigger asChild>
                     <Button variant="outline" className="gap-2 text-sm" size="sm">
