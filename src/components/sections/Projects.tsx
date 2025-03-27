@@ -35,7 +35,7 @@ const projects = [
       </span>
     ],
     links: [
-      { label: "Demo", icon: <ExternalLink className="h-4 w-4" />, url: "#" },
+      { label: "Demo", icon: <ExternalLink className="h-4 w-4" />, url: "https://miami.box.com/s/ihfi3bm5j0bwhos30conug1atfhiru4p" },
     ]
   },
   {
