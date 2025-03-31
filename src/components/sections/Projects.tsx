@@ -1,4 +1,3 @@
-
 import { Container } from "@/components/ui/Container";
 import { cn } from "@/lib/utils";
 import { Badge } from "@/components/ui/badge";
@@ -28,7 +27,7 @@ const projects = [
     techStack: ["Adafruit Circuit Playground Express", "360 Servo Motor", "Mono Class D Audio Amp", "MU Editor", "Cricut Design Space"],
     materials: ["Cardstock", "Cricut Maker 3", "Spray Paint"],
     links: [
-      { label: "Demo", icon: <ExternalLink className="h-4 w-4" />, url: "https://youtube.com/shorts/KTcZ1mz92Z8?feature=share" },
+      { label: "Demo", icon: <ExternalLink className="h-4 w-4" />, url: "https://youtu.be/RAWgK1XT2eg?si=t6ZasHq5tUU-izlc" },
     ]
   },
   {
