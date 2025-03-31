@@ -1,3 +1,4 @@
+
 import { Container } from "@/components/ui/Container";
 import { cn } from "@/lib/utils";
 import { Badge } from "@/components/ui/badge";
@@ -23,7 +24,7 @@ const projects = [
     icon: <Music className="h-5 w-5 text-gray-500" />,
     title: "Ballerina Box",
     date: "February 2024",
-    description: "A physical computing project featuring a ballerina that turns on top of a box and plays music when activated with a switch.",
+    description: "Ballerina Box is an interactive music box that combines a traditional music box with modern tech to create a fun experience. It features a hand-crafted box housing a motorized ballerina figurine that spins in response to a programmed switch. This project explores creative coding, electronics, and design to bring a simple yet engaging installation to life.",
     techStack: ["Adafruit Circuit Playground Express", "360 Servo Motor", "Mono Class D Audio Amp", "MU Editor", "Cricut Design Space"],
     materials: ["Cardstock", "Cricut Maker 3", "Spray Paint"],
     links: [
