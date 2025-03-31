@@ -25,9 +25,8 @@ const projects = [
     title: "Ballerina Box",
     date: "February 2024",
     description: "A physical computing project featuring a ballerina that turns on top of a box and plays music when activated with a switch.",
-    techStack: ["Adafruit Circuit Playground Express", "360 Servo Motor", "mono class D audio Amp"],
-    role: "Creator",
-    team: ["Solo Project"],
+    techStack: ["Adafruit Circuit Playground Express", "360 Servo Motor", "Mono Class D Audio Amp", "MU Editor", "Cricut Design Space"],
+    materials: ["Cardstock", "Cricut Maker 3", "Spray Paint"],
     links: [
       { label: "Demo", icon: <ExternalLink className="h-4 w-4" />, url: "https://youtube.com/shorts/KTcZ1mz92Z8?feature=share" },
     ]
@@ -153,21 +152,41 @@ export function Projects() {
               </div>
             )}
 
-            <div className="mb-6">
-              <h4 className="text-gray-500 mb-2">Role:</h4>
-              <p className="text-gray-700">{selectedProject.role}</p>
-            </div>
+            {/* Materials section - only displayed for the Ballerina Box project */}
+            {selectedProject.materials && selectedProject.materials.length > 0 && (
+              <div className="mb-6">
+                <h4 className="text-gray-500 mb-2">Materials:</h4>
+                <div className="flex flex-wrap gap-2">
+                  {selectedProject.materials.map((material, index) => (
+                    <Badge key={index} variant="secondary" className="bg-gray-200 text-gray-700">
+                      {material}
+                    </Badge>
+                  ))}
+                </div>
+              </div>
+            )}
 
-            <div className="mb-8">
-              <h4 className="text-gray-500 mb-2">Team:</h4>
-              <p className="text-gray-700">
-                {selectedProject.team.map((member, index) => (
-                  <span key={index} className="text-gray-900 font-medium">
-                    {member}{index < selectedProject.team.length - 1 ? ' · ' : ''}
-                  </span>
-                ))}
-              </p>
-            </div>
+            {/* Only render role section if it exists */}
+            {selectedProject.role && (
+              <div className="mb-6">
+                <h4 className="text-gray-500 mb-2">Role:</h4>
+                <p className="text-gray-700">{selectedProject.role}</p>
+              </div>
+            )}
+
+            {/* Only render team section if it exists */}
+            {selectedProject.team && selectedProject.team.length > 0 && (
+              <div className="mb-8">
+                <h4 className="text-gray-500 mb-2">Team:</h4>
+                <p className="text-gray-700">
+                  {selectedProject.team.map((member, index) => (
+                    <span key={index} className="text-gray-900 font-medium">
+                      {member}{index < selectedProject.team.length - 1 ? ' · ' : ''}
+                    </span>
+                  ))}
+                </p>
+              </div>
+            )}
 
             <div className="pt-6 border-t border-gray-200 flex gap-4">
               {selectedProject.links.map((link, index) => (
