@@ -3,7 +3,7 @@ import { Container } from "@/components/ui/Container";
 import { cn } from "@/lib/utils";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, GitBranch, Mic, Trophy, Code as CodeIcon, Leaf, Headset } from "lucide-react";
+import { ExternalLink, GitBranch, Mic, Trophy, Code as CodeIcon, Leaf, Headset, Music } from "lucide-react";
 import { useState } from "react";
 
 // Project data - edit this array to update your projects
@@ -19,6 +19,19 @@ import { useState } from "react";
 // - team: Team members
 // - links: URLs to demos, code, etc.
 const projects = [
+  {
+    id: "ballerinaBox",
+    icon: <Music className="h-5 w-5 text-gray-500" />,
+    title: "Ballerina Box",
+    date: "February 2024",
+    description: "A physical computing project featuring a ballerina that turns on top of a box and plays music when activated with a switch.",
+    techStack: ["Adafruit Circuit Playground Express", "360 Servo Motor", "mono class D audio Amp"],
+    role: "Creator",
+    team: ["Solo Project"],
+    links: [
+      { label: "Demo", icon: <ExternalLink className="h-4 w-4" />, url: "https://youtube.com/shorts/KTcZ1mz92Z8?feature=share" },
+    ]
+  },
   {
     id: "communityGarden",
     icon: <Leaf className="h-5 w-5 text-gray-500" />,
