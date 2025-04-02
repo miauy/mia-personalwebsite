@@ -36,7 +36,7 @@ export function ProjectCarousel({ open, onOpenChange, images, title }: ProjectCa
           {title} - Event Photos
         </DialogTitle>
         <DialogDescription className="mb-4">
-          Browse through photos from the event.
+          Here are photos from the event!
         </DialogDescription>
 
         <div className="py-4">
