@@ -2,12 +2,22 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Project } from "./ProjectData";
+import { useState } from "react";
+import { ProjectCarousel } from "./ProjectCarousel";
 
 interface ProjectDetailProps {
   project: Project;
 }
 
 export function ProjectDetail({ project }: ProjectDetailProps) {
+  // Add state to control the carousel dialog
+  const [isCarouselOpen, setIsCarouselOpen] = useState(false);
+
+  // Function to handle opening the carousel
+  const handleOpenCarousel = () => {
+    setIsCarouselOpen(true);
+  };
+
   return (
     <div className="col-span-1 lg:col-span-2 bg-gray-50 rounded-xl p-8 border border-gray-200 shadow-sm">
       {/* Project header with icon and title */}
@@ -79,20 +89,48 @@ export function ProjectDetail({ project }: ProjectDetailProps) {
       )}
 
       <div className="pt-6 border-t border-gray-200 flex gap-4">
-        {project.links.map((link, index) => (
-          <Button
-            key={index}
-            variant="outline"
-            className="bg-gray-900 text-white hover:bg-gray-800 border-none"
-            asChild
-          >
-            <a href={link.url} target="_blank" rel="noopener noreferrer">
-              {link.icon}
-              {link.label}
-            </a>
-          </Button>
-        ))}
+        {project.links.map((link, index) => {
+          // Special handling for the "Event" link to open the carousel
+          if (link.label === "Event" && project.images && project.images.length > 0) {
+            return (
+              <Button
+                key={index}
+                variant="outline"
+                className="bg-gray-900 text-white hover:bg-gray-800 border-none"
+                onClick={handleOpenCarousel}
+              >
+                {link.icon}
+                {link.label}
+              </Button>
+            );
+          }
+          
+          // Regular external links
+          return (
+            <Button
+              key={index}
+              variant="outline"
+              className="bg-gray-900 text-white hover:bg-gray-800 border-none"
+              asChild
+            >
+              <a href={link.url} target="_blank" rel="noopener noreferrer">
+                {link.icon}
+                {link.label}
+              </a>
+            </Button>
+          );
+        })}
       </div>
+      
+      {/* Render the carousel component if the project has images */}
+      {project.images && project.images.length > 0 && (
+        <ProjectCarousel
+          open={isCarouselOpen}
+          onOpenChange={setIsCarouselOpen}
+          images={project.images}
+          title={project.title}
+        />
+      )}
     </div>
   );
 }

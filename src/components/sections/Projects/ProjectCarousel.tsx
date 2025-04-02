@@ -4,6 +4,7 @@ import {
   DialogContent,
   DialogTitle,
   DialogDescription,
+  DialogClose,
 } from "@/components/ui/dialog";
 import {
   Carousel,
@@ -12,8 +13,8 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { useState } from "react";
 import { X } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 interface ProjectCarouselProps {
   open: boolean;
@@ -25,11 +26,16 @@ interface ProjectCarouselProps {
 export function ProjectCarousel({ open, onOpenChange, images, title }: ProjectCarouselProps) {
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="sm:max-w-4xl">
-        <DialogTitle className="flex justify-between items-center">
-          <span>{title} - Event Photos</span>
+      <DialogContent className="sm:max-w-5xl">
+        <DialogClose className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground">
+          <X className="h-6 w-6" />
+          <span className="sr-only">Close</span>
+        </DialogClose>
+        
+        <DialogTitle className="text-xl font-semibold mb-2">
+          {title} - Event Photos
         </DialogTitle>
-        <DialogDescription>
+        <DialogDescription className="mb-4">
           Browse through photos from the event.
         </DialogDescription>
 
@@ -38,19 +44,18 @@ export function ProjectCarousel({ open, onOpenChange, images, title }: ProjectCa
             <CarouselContent>
               {images.map((image, index) => (
                 <CarouselItem key={index}>
-                  <div className="p-1">
+                  <div className="p-1 flex justify-center">
                     <img 
                       src={image} 
                       alt={`${title} event photo ${index + 1}`} 
-                      className="w-full h-auto rounded-lg object-cover"
-                      style={{ maxHeight: "60vh" }}
+                      className="max-h-[60vh] rounded-lg object-contain"
                     />
                   </div>
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="-left-12" />
-            <CarouselNext className="-right-12" />
+            <CarouselPrevious />
+            <CarouselNext />
           </Carousel>
         </div>
       </DialogContent>
