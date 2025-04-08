@@ -53,7 +53,7 @@ export const projects: Project[] = [
       </span>
     ],
     links: [
-      { label: "Demo", icon: <ExternalLink className="h-4 w-4" />, url: "https://miami.box.com/s/ihfi3bm5j0bwhos30conug1atfhiru4p" },
+      { label: "Demo", icon: <ExternalLink className="h-4 w-4" />, url: "https://youtu.be/heUM3D9q4Pk" },
     ]
   },
   {
