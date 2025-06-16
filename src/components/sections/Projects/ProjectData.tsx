@@ -1,5 +1,5 @@
 
-import { Mic, Trophy, CodeIcon, Leaf, Headset, Music, ExternalLink, GitBranch, Image } from "lucide-react";
+import { Mic, Trophy, CodeIcon, Leaf, Headset, Music, ExternalLink, GitBranch, Image, FileText } from "lucide-react";
 import { ReactNode } from "react";
 
 // Project data type definition
@@ -26,15 +26,15 @@ export interface Project {
 // Project data - edit this array to update your projects
 export const projects: Project[] = [
   {
-    id: "ballerinaBox",
+    id: "recordPlayer",
     icon: <Music className="h-5 w-5 text-gray-500" />,
-    title: "Ballerina Box",
-    date: "Feb 2024",
-    description: "Ballerina Box is an interactive music box that combines a traditional music box with modern tech to create a fun experience. It features a hand-crafted box housing a motorized ballerina figurine that spins in response to a programmed switch. This project explores creative coding, electronics, and design to bring a simple yet engaging installation to life.",
-    techStack: ["Adafruit Circuit Playground Express", "360 Servo Motor", "Mono Class D Audio Amp", "MU Editor", "Cricut Design Space"],
-    materials: ["Cardstock", "Cricut Maker 3", "Spray Paint"],
+    title: "Record Player",
+    date: "May 2025",
+    description: "I designed and 3D printed a record player then integrated an Adafruit microcontroller, a continuous rotation servo to spin the platter, and an RFID reader to detect and select tracks. It merges analog vinyl playback with programmable controls for interactive listening.",
+    techStack: ["Adafruit Circuit Playground Express", "360 Servo Motor", "Mono Class D Audio Amp", "MU Editor", "Cricut Design Space", "RFID Sensor", "RFID Keys", "Onshape", "Bambu Studio", "Physical Computing"],
+    materials: ["Bambu 3D Printer", "Cardstock", "Cricut Maker 3", "Spray Paint"],
     links: [
-      { label: "Demo", icon: <ExternalLink className="h-4 w-4" />, url: "https://youtu.be/RAWgK1XT2eg?si=t6ZasHq5tUU-izlc" },
+      { label: "Documentation", icon: <FileText className="h-4 w-4" />, url: "https://island-find-780.notion.site/Physical-Computing-Record-Player-1ddbe8f1e25580c5b4d4c46677cc417b" },
     ]
   },
   {
