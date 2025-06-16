@@ -1,4 +1,3 @@
-
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Project } from "./ProjectData";
@@ -32,6 +31,12 @@ export function ProjectDetail({ project }: ProjectDetailProps) {
         <Badge variant="outline" className="bg-gray-100 text-gray-700 border-gray-200">
           {project.date}
         </Badge>
+        {/* Display tags next to the date */}
+        {project.tags && project.tags.map((tag, index) => (
+          <Badge key={index} variant="outline" className="bg-gray-100 text-gray-700 border-gray-200">
+            {tag}
+          </Badge>
+        ))}
       </div>
 
       <p className="text-gray-700 mb-8">
