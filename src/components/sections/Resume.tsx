@@ -1,20 +1,10 @@
 import { Container } from "@/components/ui/Container";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { 
-  Drawer,
-  DrawerClose,
-  DrawerContent,
-  DrawerDescription,
-  DrawerFooter,
-  DrawerHeader,
-  DrawerTitle,
-  DrawerTrigger
-} from "@/components/ui/drawer";
-import { Download, FileText, ExternalLink, Github } from "lucide-react";
+import { Download, FileText, Github } from "lucide-react";
 
 export function Resume() {
-  const resumeUrl = "/Mia_Uy_Resume_2025.pdf";
+  const resumeUrl = "https://drive.google.com/file/d/1o5OvBBlXKuijQpNGnnsJA8S_s6ExcUER/view?usp=share_link";
   
   return (
     <section id="resume" className="py-24 bg-secondary/30">
@@ -47,42 +37,13 @@ export function Resume() {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-3 w-full justify-center">
-                <Drawer>
-                  <DrawerTrigger asChild>
-                    <Button variant="outline" className="gap-2 text-sm" size="sm">
-                      <FileText className="h-4 w-4" /> View Resume
-                    </Button>
-                  </DrawerTrigger>
-                  <DrawerContent className="max-h-[90vh]">
-                    <div className="mx-auto w-full max-w-4xl">
-                      <DrawerHeader>
-                        <DrawerTitle>Mia Uy</DrawerTitle>
-                        <DrawerDescription>Resume</DrawerDescription>
-                      </DrawerHeader>
-                      <div className="p-4 overflow-auto max-h-[70vh]">
-                        <div className="bg-white rounded-md shadow-sm mx-auto">
-                          <iframe 
-                            src={resumeUrl} 
-                            title="Mia Uy's Resume" 
-                            className="w-full h-[70vh] border-0"
-                          />
-                        </div>
-                      </div>
-                      <DrawerFooter>
-                        <a href={resumeUrl} download="Mia_Uy_Resume_2025.pdf">
-                          <Button className="gap-2">
-                            <Download className="h-4 w-4" /> Download Resume
-                          </Button>
-                        </a>
-                        <DrawerClose asChild>
-                          <Button variant="outline">Close</Button>
-                        </DrawerClose>
-                      </DrawerFooter>
-                    </div>
-                  </DrawerContent>
-                </Drawer>
+                <a href={resumeUrl} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+                  <Button variant="outline" className="gap-2 text-sm w-full" size="sm">
+                    <FileText className="h-4 w-4" /> View Resume
+                  </Button>
+                </a>
                 
-                <a href={resumeUrl} download="Mia_Uy_Resume_2025.pdf" className="w-full sm:w-auto">
+                <a href={resumeUrl} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
                   <Button variant="default" className="gap-2 text-sm w-full" size="sm">
                     <Download className="h-4 w-4" /> Download Resume
                   </Button>
