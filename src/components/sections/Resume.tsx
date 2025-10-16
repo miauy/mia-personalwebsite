@@ -14,7 +14,7 @@ import {
 import { Download, FileText, ExternalLink, Github } from "lucide-react";
 
 export function Resume() {
-  const resumeUrl = "/lovable-uploads/2354da66-563f-4f42-91a8-27f3d6c10749.png";
+  const resumeUrl = "/Mia_Uy_Resume_2025.pdf";
   
   return (
     <section id="resume" className="py-24 bg-secondary/30">
@@ -61,15 +61,15 @@ export function Resume() {
                       </DrawerHeader>
                       <div className="p-4 overflow-auto max-h-[70vh]">
                         <div className="bg-white rounded-md shadow-sm mx-auto">
-                          <img 
+                          <iframe 
                             src={resumeUrl} 
-                            alt="Mia Uy's Resume" 
-                            className="w-full h-auto object-contain"
+                            title="Mia Uy's Resume" 
+                            className="w-full h-[70vh] border-0"
                           />
                         </div>
                       </div>
                       <DrawerFooter>
-                        <a href={resumeUrl} download="Mia_Uy_Resume.png">
+                        <a href={resumeUrl} download="Mia_Uy_Resume_2025.pdf">
                           <Button className="gap-2">
                             <Download className="h-4 w-4" /> Download Resume
                           </Button>
@@ -82,7 +82,7 @@ export function Resume() {
                   </DrawerContent>
                 </Drawer>
                 
-                <a href={resumeUrl} download="Mia_Uy_Resume.png" className="w-full sm:w-auto">
+                <a href={resumeUrl} download="Mia_Uy_Resume_2025.pdf" className="w-full sm:w-auto">
                   <Button variant="default" className="gap-2 text-sm w-full" size="sm">
                     <Download className="h-4 w-4" /> Download Resume
                   </Button>
