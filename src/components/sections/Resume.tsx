@@ -38,7 +38,7 @@ export function Resume() {
               
               <div className="flex justify-center w-full">
                 <a href={resumeUrl} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
-                  <Button variant="outline" className="gap-2 text-sm w-full" size="sm">
+                  <Button variant="default" className="gap-2 text-sm w-full" size="sm">
                     <FileText className="h-4 w-4" /> View Resume
                   </Button>
                 </a>
