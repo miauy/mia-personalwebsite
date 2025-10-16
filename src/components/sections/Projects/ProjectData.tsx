@@ -46,7 +46,23 @@ export const projects: Project[] = [
     description: "An Educational Dinosaur AR Experience. ARchaeology is an augmented reality application designed for Meta Quest to bring paleontology to your own backyard! The app's hands-on gameplay allows the user to step into the role of an archaeologist by uncovering, digging, cleaning, and assembling dinosaur skeletons.",
     techStack: ["Unity", "Figma", "Blender", "Garageband"],
     role: "UI/UX Designer, Audio Engineer, and Project Manager",
-    team: ["Jared De Monteiro (Developer)", "Kai Binatti (Developer)", "Thomas Potts (3D Modeler)"],
+    team: [
+      <span key="jared">
+        <a href="https://www.linkedin.com/in/jareddemonteiro/" target="_blank" rel="noopener noreferrer">
+          Jared De Monteiro
+        </a> <em>(Developer)</em>
+      </span>,
+      <span key="kai">
+        <a href="https://www.linkedin.com/in/pettini-kai/" target="_blank" rel="noopener noreferrer">
+          Kai Pettini
+        </a> <em>(Developer)</em>
+      </span>,
+      <span key="thomas">
+        <a href="https://www.linkedin.com/in/thomas-potts-9658442b7/" target="_blank" rel="noopener noreferrer">
+          Thomas Potts
+        </a> <em>(3D Modeler)</em>
+      </span>
+    ],
     links: [
       { label: "Demo", icon: <ExternalLink className="h-4 w-4" />, url: "https://drive.google.com/file/d/1f_ewSSWNC4oP1YTE_U3C95Ot0PSpftbj/view?usp=share_link" },
     ]
