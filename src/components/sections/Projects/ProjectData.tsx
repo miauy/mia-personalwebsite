@@ -1,4 +1,4 @@
-import { Mic, Trophy, CodeIcon, Leaf, Headset, Music, ExternalLink, GitBranch, Image, FileText } from "lucide-react";
+import { Mic, Trophy, CodeIcon, Leaf, Headset, Music, ExternalLink, GitBranch, Image, FileText, Bone } from "lucide-react";
 import { ReactNode } from "react";
 
 // Project data type definition
@@ -36,6 +36,19 @@ export const projects: Project[] = [
     materials: ["Bambu 3D Printer", "Cardstock", "Cricut Maker 3", "Spray Paint"],
     links: [
       { label: "Documentation", icon: <FileText className="h-4 w-4" />, url: "https://island-find-780.notion.site/Physical-Computing-Record-Player-1ddbe8f1e25580c5b4d4c46677cc417b" },
+    ]
+  },
+  {
+    id: "archaeology",
+    icon: <Bone className="h-5 w-5 text-gray-500" />,
+    title: "ARchaeology",
+    date: "April 2025 - May 2025",
+    description: "An Educational Dinosaur AR Experience. ARchaeology is an augmented reality application designed for Meta Quest to bring paleontology to your own backyard! The app's hands-on gameplay allows the user to step into the role of an archaeologist by uncovering, digging, cleaning, and assembling dinosaur skeletons.",
+    techStack: ["Unity", "Figma", "Blender", "Garageband"],
+    role: "UI/UX Designer and Audio Engineer",
+    team: ["Jared De Monteiro (Developer)", "Kai Binatti (Developer)", "Thomas Potts (3D Modeler)"],
+    links: [
+      { label: "Demo", icon: <ExternalLink className="h-4 w-4" />, url: "https://drive.google.com/file/d/1f_ewSSWNC4oP1YTE_U3C95Ot0PSpftbj/view?usp=share_link" },
     ]
   },
   {
