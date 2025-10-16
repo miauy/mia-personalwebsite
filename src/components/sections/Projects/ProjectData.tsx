@@ -45,7 +45,7 @@ export const projects: Project[] = [
     date: "April 2025 - May 2025",
     description: "An Educational Dinosaur AR Experience. ARchaeology is an augmented reality application designed for Meta Quest to bring paleontology to your own backyard! The app's hands-on gameplay allows the user to step into the role of an archaeologist by uncovering, digging, cleaning, and assembling dinosaur skeletons.",
     techStack: ["Unity", "Figma", "Blender", "Garageband"],
-    role: "UI/UX Designer and Audio Engineer",
+    role: "UI/UX Designer, Audio Engineer, and Project Manager",
     team: ["Jared De Monteiro (Developer)", "Kai Binatti (Developer)", "Thomas Potts (3D Modeler)"],
     links: [
       { label: "Demo", icon: <ExternalLink className="h-4 w-4" />, url: "https://drive.google.com/file/d/1f_ewSSWNC4oP1YTE_U3C95Ot0PSpftbj/view?usp=share_link" },
@@ -58,7 +58,7 @@ export const projects: Project[] = [
     date: "Aug 2024 - Dec 2024",
     description: "A virtual reality experience aimed to teach children in underprivileged communities about where food comes from and how it's grown.",
     techStack: ["Unity", "Figma"],
-    role: "UI/UX Designer",
+    role: "UI/UX Designer and Project Manager",
     team: [
       <span key="raquel">
         <a href="https://www.linkedin.com/in/raquel-henao-1a268129a/" target="_blank" rel="noopener noreferrer">
