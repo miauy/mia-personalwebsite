@@ -36,16 +36,10 @@ export function Resume() {
                 Check out my professional experience, education, and skills.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-3 w-full justify-center">
+              <div className="flex justify-center w-full">
                 <a href={resumeUrl} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
                   <Button variant="outline" className="gap-2 text-sm w-full" size="sm">
                     <FileText className="h-4 w-4" /> View Resume
-                  </Button>
-                </a>
-                
-                <a href={resumeUrl} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
-                  <Button variant="default" className="gap-2 text-sm w-full" size="sm">
-                    <Download className="h-4 w-4" /> Download Resume
                   </Button>
                 </a>
               </div>
