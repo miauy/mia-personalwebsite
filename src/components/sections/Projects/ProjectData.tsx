@@ -1,4 +1,4 @@
-import { Mic, Trophy, CodeIcon, Leaf, Headset, Music, ExternalLink, GitBranch, Image, FileText, Bone } from "lucide-react";
+import { Mic, Trophy, CodeIcon, Leaf, Headset, Music, ExternalLink, GitBranch, Image, FileText, Bone, Flower2 } from "lucide-react";
 import { ReactNode } from "react";
 
 // Project data type definition
@@ -25,6 +25,17 @@ export interface Project {
 
 // Project data - edit this array to update your projects
 export const projects: Project[] = [
+  {
+    id: "zenGarden",
+    icon: <Flower2 className="h-5 w-5 text-gray-500" />,
+    title: "VR Zen Garden",
+    date: "Nov 2025 - Dec 2025",
+    description: "The Zen Garden is a Japanese-inspired VR experience I designed and developed in Unity using XR Origin. Users can rake sand, place stones, and interact with a calming environment built to encourage focus and relaxation. The project blends hand-crafted interactions with an authentic aesthetic to create an immersive, meditative space.",
+    techStack: ["Unity", "Figma", "Pixabay"],
+    links: [
+      { label: "Demo", icon: <ExternalLink className="h-4 w-4" />, url: "https://drive.google.com/file/d/1ylyUx62KZH5CmuNj3wkFCOAf6ObB9WFP/view?usp=share_link" },
+    ]
+  },
   {
     id: "recordPlayer",
     icon: <Music className="h-5 w-5 text-gray-500" />,
