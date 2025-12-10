@@ -32,6 +32,7 @@ export const projects: Project[] = [
     date: "Nov 2025 - Dec 2025",
     description: "The Zen Garden is a Japanese-inspired VR experience I designed and developed in Unity using XR Origin. Users can rake sand, place stones, and interact with a calming environment built to encourage focus and relaxation. The project blends hand-crafted interactions with an authentic aesthetic to create an immersive, meditative space.",
     techStack: ["Unity", "Figma", "Pixabay"],
+    role: "UI/UX Designer and Developer",
     links: [
       { label: "Demo", icon: <ExternalLink className="h-4 w-4" />, url: "https://drive.google.com/file/d/1ylyUx62KZH5CmuNj3wkFCOAf6ObB9WFP/view?usp=share_link" },
     ]
