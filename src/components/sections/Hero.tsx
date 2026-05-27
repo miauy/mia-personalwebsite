@@ -43,7 +43,7 @@ export function Hero() {
           <div className="order-1 md:order-2 flex justify-center md:justify-end opacity-0 animate-fade-in [animation-delay:600ms]">
             <div className="relative w-64 h-64 md:w-96 md:h-96 rounded-full overflow-hidden border-8 border-white shadow-xl ring-2 ring-primary/20">
               <img 
-                src="/lovable-uploads/903c31a3-df23-4391-b24c-9fb7cf8d3a5d.png" 
+                src="/lovable-uploads/mia-profile-2026.jpeg" 
                 alt="Mia Uy" 
                 className="w-full h-full object-cover"
               />
