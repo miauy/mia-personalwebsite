@@ -21,7 +21,7 @@ export function Hero() {
             {/* Bio text - edit your personal statement here */}
             {/* Font size reduced by 3 sizes from text-xl/2xl to text-xs/sm */}
             <p className="text-gray-800 max-w-xl mb-10 text-xs md:text-sm opacity-0 animate-fade-in [animation-delay:600ms]">
-              I am a senior at the University of Miami studying Computer Science and Immersive Media. I want to leverage my technical background to bridge the gap between users and technology to create experiences that matter.
+              I am a recent graduate of the University of Miami with a Bachelor of Arts in Computer Science and a Bachelor of Science in Communication (B.S.C.) in Immersive Media. I want to leverage my technical background to bridge the gap between users and technology to create experiences that matter.
             </p>
             
             {/* Call-to-action buttons - edit links and text here */}
